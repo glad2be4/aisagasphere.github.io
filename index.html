@@ -4,10 +4,122 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Saga Sphere</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121933;
+      --text: #f5f7ff;
+      --muted: #b8c0e0;
+      --accent: #7aa2ff;
+      --accent2: #9b7bff;
+      --border: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #101935 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(122,162,255,.18), rgba(155,123,255,.16));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 40px;
+      line-height: 1.1;
+    }
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: var(--text);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      font-weight: 700;
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    a { color: #cdddff; }
+  </style>
 </head>
 <body>
-  <h1>AI Saga Sphere</h1>
-  <p>Official site for AI Saga Sphere, LLC.</p>
-  <p>AI-powered storytelling, books, audiobooks, and serialized narrative experiences.</p>
+  <div class="wrap">
+    <section class="hero">
+      <h1>AI Saga Sphere</h1>
+      <p>Official site for AI Saga Sphere, LLC.</p>
+      <p>AI-powered storytelling, books, audiobooks, and serialized narrative experiences.</p>
+
+      <div class="links">
+        <a class="btn" href="./privacy-policy.html">Privacy Policy</a>
+        <a class="btn secondary" href="./terms-of-service.html">Terms of Service</a>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>What We Do</h2>
+          <p>Create and publish original AI-assisted narrative experiences, including written and audio-first storytelling formats.</p>
+        </div>
+        <div class="card">
+          <h2>Platform Purpose</h2>
+          <p>Support content publishing, audience-facing storytelling, and platform integrations for approved distribution channels.</p>
+        </div>
+        <div class="card">
+          <h2>Contact</h2>
+          <p><a href="mailto:aisagasphere@glad2be.com">aisagasphere@glad2be.com</a></p>
+        </div>
+      </div>
+
+      <footer>
+        © AI Saga Sphere, LLC.
+      </footer>
+    </section>
+  </div>
 </body>
 </html>
