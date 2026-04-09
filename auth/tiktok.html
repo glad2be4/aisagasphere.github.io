@@ -1,31 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Connect your TikTok account | AiSagaSphere</title>
-  <style>
-    body{margin:0;background:#0c1122;color:#f5f7ff;font-family:Arial,Helvetica,sans-serif}
-    .wrap{max-width:760px;margin:0 auto;padding:28px 18px}
-    .card{background:#141a2f;border:1px solid #2a3358;border-radius:18px;padding:22px}
-    h1{margin:0 0 10px}
-    p,li{color:#b8c0e0;line-height:1.55}
-    .btn{display:inline-block;margin-top:14px;padding:14px 18px;border-radius:12px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,#8b5cf6,#22d3ee);color:white}
-    code{background:#11172e;border:1px solid #293257;border-radius:8px;padding:2px 6px}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Connect your TikTok account</title>
+  <link rel="stylesheet" href="/aisagasphere.github.io/_panacea_style.css">
 </head>
 <body>
   <div class="wrap">
-    <section class="card">
+    <div class="card">
       <h1>Connect your TikTok account</h1>
-      <p>
-        AiSagaSphere uses TikTok Login Kit to authenticate users and enable authorized publishing workflows.
-        Continue to TikTok to approve access and return to AiSagaSphere.
-      </p>
-      <p>Requested scopes: <strong>user.info.basic</strong>, <strong>video.upload</strong></p>
-      <p>Callback route: <code>https://glad2be4.github.io/aisagasphere.github.io/auth/callback.html</code></p>
-      <a class="btn" href="#">Continue to TikTok</a>
-    </section>
+      <p>AiSagaSphere uses TikTok Login Kit to authenticate users and enable authorized publishing workflows. Continue to TikTok to approve access and return to AiSagaSphere.</p>
+      <p><b>Requested scopes:</b> user.info.basic,video.upload</p>
+      <div class="kv">Callback route: https://aisagasphere.com/tiktok/callback/</div>
+      <div class="btnrow">
+        <a id="tiktokAuthBtn" class="btn primary" href="#">Continue to TikTok</a>
+        <a class="btn" href="/aisagasphere.github.io/terms.html">Terms of Service</a>
+        <a class="btn" href="/aisagasphere.github.io/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
   </div>
+
+<script>
+(function () {
+  const clientKey = 'awbeq5310hd7kyyk';
+  const redirectUri = 'https://aisagasphere.com/tiktok/callback/';
+  const scope = 'user.info.basic,video.upload';
+  const state = "aisagasphere-review-state";
+  const base = "https://www.tiktok.com/v2/auth/authorize/";
+  const url = base
+    + "?client_key=" + encodeURIComponent(clientKey)
+    + "&scope=" + encodeURIComponent(scope)
+    + "&response_type=code"
+    + "&redirect_uri=" + encodeURIComponent(redirectUri)
+    + "&state=" + encodeURIComponent(state);
+  document.getElementById("tiktokAuthBtn").href = url;
+})();
+</script>
 </body>
 </html>
