@@ -1,125 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Saga Sphere</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AiSagaSphere</title>
+  <meta name="description" content="AiSagaSphere is a web-based storytelling platform that allows users to connect TikTok, generate original narrative content, and publish it through an integrated posting workflow." />
   <style>
-    :root {
-      --bg: #0b1020;
-      --panel: #121933;
-      --text: #f5f7ff;
-      --muted: #b8c0e0;
-      --accent: #7aa2ff;
-      --accent2: #9b7bff;
-      --border: rgba(255,255,255,.12);
+    :root{
+      --bg:#0b1020;
+      --card:#141a2f;
+      --text:#f5f7ff;
+      --muted:#b8c0e0;
+      --accent:#8b5cf6;
+      --accent2:#22d3ee;
+      --line:#2a3358;
+      --ok:#34d399;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #0a0f1d 0%, #101935 100%);
-      color: var(--text);
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#090d19 0%,#10172c 100%);
+      color:var(--text);
     }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 32px 20px 64px;
+    .wrap{
+      max-width:880px;
+      margin:0 auto;
+      padding:28px 18px 64px;
     }
-    .hero {
-      background: linear-gradient(135deg, rgba(122,162,255,.18), rgba(155,123,255,.16));
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    .hero,.card{
+      background:rgba(20,26,47,.92);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:0 10px 35px rgba(0,0,0,.28);
     }
-    h1 {
-      margin: 0 0 12px;
-      font-size: 40px;
-      line-height: 1.1;
+    .hero h1{
+      margin:0 0 10px;
+      font-size:2rem;
+      line-height:1.1;
     }
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 18px;
+    .hero p,.card p,.card li{
+      color:var(--muted);
+      line-height:1.55;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 24px;
+    .stack{display:grid;gap:18px;margin-top:18px}
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:16px;
     }
-    .card {
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
+    .btn{
+      display:inline-block;
+      padding:14px 18px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid var(--line);
     }
-    .card h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      color: var(--text);
+    .btn-primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:white;
+      border:none;
     }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+    .btn-secondary{
+      color:var(--text);
+      background:#1a2140;
     }
-    .btn {
-      display: inline-block;
-      padding: 12px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      font-weight: 700;
+    .mini{
+      display:inline-block;
+      margin-top:10px;
+      color:#d8ddff;
+      background:#1c2344;
+      border:1px solid #323d73;
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:.92rem;
     }
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
+    h2{
+      margin:0 0 10px;
+      font-size:1.25rem;
     }
-    footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 14px;
+    ul{
+      margin:10px 0 0 20px;
+      padding:0;
     }
-    a { color: #cdddff; }
+    code{
+      background:#11172e;
+      border:1px solid #293257;
+      border-radius:8px;
+      padding:2px 6px;
+      color:#e9edff;
+    }
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:1fr;
+    }
+    @media (min-width:760px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    .ok{color:var(--ok);font-weight:700}
+    .footer{
+      margin-top:22px;
+      font-size:.95rem;
+      color:var(--muted);
+    }
+    a{color:#cdd6ff}
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <h1>AI Saga Sphere</h1>
-      <p>Official site for AI Saga Sphere, LLC.</p>
-      <p>AI-powered storytelling, books, audiobooks, and serialized narrative experiences.</p>
-
-      <div class="links">
-        <a class="btn" href="./privacy-policy.html">Privacy Policy</a>
-        <a class="btn secondary" href="./terms-of-service.html">Terms of Service</a>
+      <h1>Create original narrative content and publish it to TikTok</h1>
+      <p>
+        AiSagaSphere is a web-based storytelling platform that allows users to connect their TikTok account,
+        generate original narrative content, and publish it through an integrated TikTok posting workflow.
+      </p>
+      <div class="mini">Requested scopes: <strong>user.info.basic</strong> and <strong>video.upload</strong></div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://glad2be4.github.io/aisagasphere.github.io/auth/tiktok.html">Login with TikTok</a>
+        <a class="btn btn-secondary" href="https://glad2be4.github.io/aisagasphere.github.io/terms.html">Terms of Service</a>
+        <a class="btn btn-secondary" href="https://glad2be4.github.io/aisagasphere.github.io/privacy.html">Privacy Policy</a>
       </div>
-
-      <div class="grid">
-        <div class="card">
-          <h2>What We Do</h2>
-          <p>Create and publish original AI-assisted narrative experiences, including written and audio-first storytelling formats.</p>
-        </div>
-        <div class="card">
-          <h2>Platform Purpose</h2>
-          <p>Support content publishing, audience-facing storytelling, and platform integrations for approved distribution channels.</p>
-        </div>
-        <div class="card">
-          <h2>Contact</h2>
-          <p><a href="mailto:aisagasphere@glad2be.com">aisagasphere@glad2be.com</a></p>
-        </div>
-      </div>
-
-      <footer>
-        © AI Saga Sphere, LLC.
-      </footer>
+      <p class="footer">
+        Reviewer support flow: Login with TikTok → authorize account → return to callback page → generate content → publish to TikTok → view result.
+      </p>
     </section>
+
+    <div class="stack">
+      <section class="card">
+        <h2>How the TikTok-connected workflow works</h2>
+        <ul>
+          <li>User opens the AiSagaSphere website.</li>
+          <li>User selects <strong>Login with TikTok</strong>.</li>
+          <li>User authorizes the application using TikTok Login Kit.</li>
+          <li>User returns to the callback route after approval.</li>
+          <li>User generates original narrative content inside the website.</li>
+          <li>User initiates publishing to TikTok.</li>
+          <li>The final result is visible in TikTok.</li>
+        </ul>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>TikTok products used</h2>
+          <ul>
+            <li>Login Kit</li>
+            <li>Content Posting API</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Current submission identity</h2>
+          <p><span class="ok">Center-point account:</span> aisagasphere@glad2be.com</p>
+          <p>Current website URL: <code>https://glad2be4.github.io/aisagasphere.github.io/</code></p>
+          <p>Callback route: <code>https://glad2be4.github.io/aisagasphere.github.io/auth/callback.html</code></p>
+        </article>
+      </section>
+    </div>
   </div>
 </body>
 </html>

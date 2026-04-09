@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TikTok connection successful | AiSagaSphere</title>
+  <title>Connect your TikTok account | AiSagaSphere</title>
   <style>
     body{margin:0;background:#0c1122;color:#f5f7ff;font-family:Arial,Helvetica,sans-serif}
     .wrap{max-width:760px;margin:0 auto;padding:28px 18px}
     .card{background:#141a2f;border:1px solid #2a3358;border-radius:18px;padding:22px}
     h1{margin:0 0 10px}
-    p{color:#b8c0e0;line-height:1.55}
-    .ok{display:inline-block;padding:8px 10px;border-radius:999px;background:#113426;border:1px solid #1d6b4d;color:#b9f5d8;font-weight:700}
+    p,li{color:#b8c0e0;line-height:1.55}
     .btn{display:inline-block;margin-top:14px;padding:14px 18px;border-radius:12px;text-decoration:none;font-weight:700;background:linear-gradient(90deg,#8b5cf6,#22d3ee);color:white}
+    code{background:#11172e;border:1px solid #293257;border-radius:8px;padding:2px 6px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="card">
-      <div class="ok">Authentication successful</div>
-      <h1>TikTok connection successful</h1>
+      <h1>Connect your TikTok account</h1>
       <p>
-        Your TikTok account has been connected to AiSagaSphere. You can now generate original narrative content
-        and publish authorized content to TikTok from within the platform.
+        AiSagaSphere uses TikTok Login Kit to authenticate users and enable authorized publishing workflows.
+        Continue to TikTok to approve access and return to AiSagaSphere.
       </p>
-      <p>Authorization complete. Redirect processed successfully.</p>
-      <a class="btn" href="https://glad2be4.github.io/aisagasphere.github.io/">Continue to content generation</a>
+      <p>Requested scopes: <strong>user.info.basic</strong>, <strong>video.upload</strong></p>
+      <p>Callback route: <code>https://glad2be4.github.io/aisagasphere.github.io/auth/callback.html</code></p>
+      <a class="btn" href="#">Continue to TikTok</a>
     </section>
   </div>
 </body>

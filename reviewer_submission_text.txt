@@ -1,0 +1,23 @@
+AiSagaSphere is a web-based AI-powered storytelling platform that allows users to generate original narrative content and publish it to TikTok.
+
+This submission demonstrates the complete end-to-end integration using TikTok Login Kit and the Content Posting API.
+
+End-to-end flow shown in the demo videos:
+1. The user opens the AiSagaSphere website.
+2. The user selects “Login with TikTok.”
+3. The user authorizes the application using TikTok Login Kit.
+4. The user is redirected back to the AiSagaSphere callback route.
+5. The platform generates original narrative content inside the website.
+6. The user initiates publishing to TikTok.
+7. The generated content is uploaded through the TikTok Content Posting API.
+8. The final result is shown in TikTok.
+
+Products used in this submission:
+- Login Kit
+- Content Posting API
+
+Scopes used in this submission:
+- user.info.basic
+- video.upload
+
+The demo videos were updated to clearly show the user interface, the website domain, the TikTok authorization flow, the redirect back to the website, the content generation step, the publish action, and the final TikTok result.

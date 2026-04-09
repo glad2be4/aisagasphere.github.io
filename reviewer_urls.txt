@@ -1,0 +1,11 @@
+Website URL:
+https://glad2be4.github.io/aisagasphere.github.io/
+
+Terms of Service URL:
+https://glad2be4.github.io/aisagasphere.github.io/terms.html
+
+Privacy Policy URL:
+https://glad2be4.github.io/aisagasphere.github.io/privacy.html
+
+Redirect URI:
+https://glad2be4.github.io/aisagasphere.github.io/auth/callback.html
